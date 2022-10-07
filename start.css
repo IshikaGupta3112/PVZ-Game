@@ -1,0 +1,41 @@
+*{
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+body {
+    background:url('start.jpeg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+#text{
+    height:25rem;
+    width:25rem;
+    display:block;
+    margin:auto;
+    margin-top:-2rem;
+    visibility: hidden;
+} 
+#button{
+height:3rem;
+width:17rem;
+display:block;
+margin:auto;
+margin-top:16rem;
+background-color: rgba(246, 142, 15,0.9);
+color:white;
+visibility:hidden;
+}
+#button-heading{
+    font-size: 1rem;
+}
+@media (max-width:414px){
+    #text{
+        height:5rem;
+        width:5rem;
+        margin-top:0rem;
+    }
+    #button{
+        margin-top:3rem;
+    }
+}
