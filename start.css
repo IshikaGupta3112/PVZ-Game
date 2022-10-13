@@ -1,0 +1,64 @@
+*{
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+body {
+    background:url('start.jpeg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+#text{
+    height:35rem;
+    width:35rem;
+    display:block;
+    margin:auto;
+    margin-top:-3rem;
+} 
+#button{
+height:3rem;
+width:17rem;
+display:block;
+margin:auto;
+margin-top:-3rem;
+background: linear-gradient(rgb(255, 94, 0),orange,yellow);
+color:white;
+border:3px solid white;
+border-radius:15px;
+visibility:hidden;
+font-size: 1rem;
+font-weight:bold;
+visibility: hidden;
+}
+#button:hover{
+    background: linear-gradient(yellow , orange,rgb(255, 94, 0)); 
+}
+#white{ 
+    background-color: white;
+    width:30vw;
+    height:4vh;
+    display:block;
+    margin:auto;
+    margin-top:11vh;
+    border-radius:10px;
+}
+#orange{ 
+    background-color: orange;
+    width:0vw;
+    height:4vh;
+    display:block;
+    margin-left:35vw;
+    /* margin:auto; */
+    margin-top:-4vh;
+    border-radius:10px;
+}
+@media (max-width:414px){
+    #text{
+        height:5rem;
+        width:5rem;
+        margin-top:0rem;
+    }
+    #button{
+        margin-top:3rem;
+    }
+}

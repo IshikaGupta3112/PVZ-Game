@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            overflow: hidden;
+        }
+        #back{
+            height:101vh;
+            width:100%;
+        }
+       .heading{
+        position:absolute;
+        font-size:1.5rem;
+        background-color: rgb(204, 207, 210,0);
+        width:19vw;
+       }
+       .heading:hover{
+        color:antiquewhite;
+       }
+       #play{
+        margin-left:62.5vw;
+        margin-top:20.5vh;
+       }
+       #rules{
+        margin-top:32.5vh;
+        margin-left:62.5vw;
+       }
+       #about{
+        margin-top:46vh;
+        margin-left:62.5vw;
+       }
+       #help{
+        margin-left:62.5vw;
+        margin-top:58vh;
+       }
+       #backs{
+        margin-left:62.5vw;
+        margin-top:71.5vh;
+       }
+       .box{
+        position:absolute;
+        width:70vw;
+        height:70vh;
+        margin-top:13vh;
+        margin-left:15vw;
+        background-color: rgb(192, 191, 191,0.9);
+        border-radius:5vh;
+        z-index:2;
+        visibility:hidden;
+       }
+       .box h1{
+      text-align:center;
+      color:red;
+      font-size:3vw;
+      padding:2vh;
+      margin-top:3vh;
+       }
+       .box p{
+        padding:2vw;
+        font-size:4vh;
+        line-height: 5vh;
+       }
+       .icon{
+        position:absolute;
+        font-size:4vh;
+        width:3vw;
+        background-color:red;
+       margin:3vh;
+       margin-top:3vh;
+        color:white;
+        font-weight: bold;
+        display:block;
+       }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">
+        <button id="icon1" onclick="hide1()" class="icon">X</button>
+        <h1>RULES</h1>
+        <p>1.You can place a plant if and only if the points being displayed on the screen are greater than or equal to 100.<br>
+        2.On collecting one sun the points increase by 50.<br>
+    3.On placing a plant points get decreased by 100.<br>
+4.The health of all zombies is 100 initially.<br>
+5.Each time the ball hits the zombie,the health of zombie decreases by 20.<br>
+6.When the health of zombie reduces to 0 it dies.<br>
+7.When all zombies are dead u win<br>
+8.If any zombie makes it to the house game gets over<br></p>
+    </div>
+    <div class="box" id="box2">
+        <button id="icon2" onclick="hide2()" class="icon">X</button>
+        <h1>ABOUT THE GAME</h1>
+        <p>Plants vs. Zombies is a 2009 tower defense video game developed and published by PopCap Games. First released for Windows and Mac OS X, the game has since been ported to consoles, handhelds, and mobile devices. The player takes the role of a homeowner amid a zombie apocalypse. As a horde of zombies approaches along several parallel lanes, the player must defend the home by putting down plants, which fire projectiles at the zombies or otherwise detrimentally affect them. The player collects a currency called sun to buy plants. If a zombie happens to make it to the house on any lane, the player must play through the level again.</p>
+    </div>
+    <div class="box" id="box3">
+        <button id="icon3" onclick="hide3()" class="icon">X</button>
+        <h1>HELP</h1>
+        <p>FOR FURTHER QUERIES:<br>
+        CONTACT:<br>
+    igishika289@gmail.com<br>
+        akshat2131024@akgec.ac.in</p>
+    </div>
+   <button class="heading" id="play" onclick="window.open('new.html','_self')"><b>PLAY!</b></button> 
+   <button class="heading" id="rules" onclick="rules()"><b>RULES</b></button> 
+   <button class="heading" id="about" onclick="about()"><b>ABOUT</b></button>
+   <button class="heading" id="help" onclick="help()"><b>HELP</b></button>
+   <button class="heading" id="backs" onclick="window.open('index.html','_self')"><b>BACK</b></button>
+ <img src="back.jpeg" id="back" >
+</body>
+<script>
+     var box1=document.getElementById('box1');
+     var box2=document.getElementById('box2');
+    function rules(){   
+        box1.style.visibility="visible";
+    }
+    function hide1(){
+        box1.style.visibility="hidden"; 
+    }
+    function about(){   
+        box2.style.visibility="visible";
+    }
+    function hide2(){
+        box2.style.visibility="hidden"; 
+    } 
+    function help(){   
+        box3.style.visibility="visible";
+    }
+    function hide3(){   
+        box3.style.visibility="hidden";
+    }
+</script>
+</html>

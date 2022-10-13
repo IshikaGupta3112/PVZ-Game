@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>win</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            overflow:hidden;
+        }
+        body{
+            background-color: rgb(24, 23, 23);
+        }
+        #win{
+            position:absolute;
+            height:100vh;
+            margin-top:-30vh;
+            margin-left:23vw;
+        }
+        #laugh{
+            display:block;
+            height:40vh;
+            margin:auto;
+            margin-top:35vh;
+        }
+        #again{
+     width:20vw;
+    padding:1rem;
+   display:block;
+   margin:auto;
+   margin-top:6vh;
+    background:linear-gradient(rgb(198, 128, 49),rgb(74, 42, 5));
+    color:white;
+    font-size: 1rem;
+    font-weight:bold;
+    border:3px solid white;
+    border-radius:10px;
+        }
+        #again:hover{
+            background:linear-gradient(rgb(74, 42, 5),rgb(198, 128, 49));
+        }
+    </style>
+</head>
+<body>
+<img src="wins.png" id="win"> 
+<img src="laugh.png" id="laugh"> 
+<button id="again" onclick="window.open('new.html' , '_self')">PLAY AGAIN!</button>  
+</body>
+</html>
