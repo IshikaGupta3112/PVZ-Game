@@ -28,5 +28,5 @@ else{
     document.getElementById('orange').style.width=wid+"vw";
     console.log(wid);
 }
-wid+=0.5;
+wid+=1.5;
 }
