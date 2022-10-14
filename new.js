@@ -1,3 +1,4 @@
+var arr=[0,0,0,0,0,0,0,0,0];
 var point=150;
 var pos1;
 var pos2;
@@ -49,14 +50,26 @@ if(sun1.marginTop!="100.37vh"){
     var walks6=document.getElementById('walk6');
     walks1.style.display="block";
     walks1.style.marginTop="8.15vh";
-    var id1= setInterval(move,200);
+    var id1= setInterval(move,100);
 	var pos1=97.2;
 	let w = 22.2;  
-	function move(){     
+	function move(){   
+      
 		if (pos1 <= w){
 		pos1= 97.2+"vw";
         window.open("last.html" , "_self");
-		}  
+		} 
+       else if(pos1<=42&&arr[2]===1){
+        check=0;
+        walks1.style.opacity="1";
+        walks1.style.visibility="visible";
+        walks1.style.marginLeft= pos1 +"vw";
+       } 
+       else if(pos1<=42&&arr[1]===1){
+        check=0;
+        walks1.style.visibility="visible";
+        walks1.style.marginLeft= pos1 +"vw";
+       } 
         else{
 		walks1.style.marginLeft= pos1 +"vw";
 		}
@@ -70,11 +83,21 @@ if(sun1.marginTop!="100.37vh"){
          pos2=97.2;
 	   let w =22.2;
 	function move2(){
-        var health2=100;
 		if (pos2 <= w){
 		pos2=97.2+"vw";
         window.open("last.html" , "_self");
-		}  
+		} 
+        else if(pos2<=42&&arr[4]===1){
+            check3=0;
+            walks2.style.opacity="1";
+            walks2.style.visibility="visible";
+            walks2.style.marginLeft= pos2 +"vw";
+           } 
+           else if(pos2<=42&&arr[5]===1){
+            check3=0;
+            walks2.style.visibility="visible";
+            walks2.style.marginLeft= pos2 +"vw";
+           }  
         else{
 		walks2.style.marginLeft= pos2 +"vw";
 		}
@@ -89,11 +112,21 @@ setTimeout(show2,20000);
         pos3=97.2;
 	   let w =22.2 ;
 	function move3(){
-        var health3=100;
 		if (pos3 <= w){
 		pos3= 97.2+"vw"
         window.open("last.html" , "_self");
 		}  
+        else if(pos3<=42&&arr[7]===1){
+            check5=0;
+            walks3.style.opacity="1";
+            walks3.style.visibility="visible";
+            walks3.style.marginLeft= pos3 +"vw";
+           } 
+           else if(pos3<=42&&arr[8]===1){
+            check5=0;
+            walks3.style.visibility="visible";
+            walks3.style.marginLeft= pos3 +"vw";
+           }  
         else{
 		walks3.style.marginLeft= pos3 +"vw";
 		}
@@ -126,7 +159,6 @@ setTimeout(show4,40000);
         pos5=97.2;
 	   let w =22.2;
 	function move5(){
-        var health5=100;
 		if (pos5 <= w){
 		pos5= 97.2+"vw";
         window.open("last.html" , "_self");
@@ -145,7 +177,6 @@ setTimeout(show5,50000);
        pos6=97.2;
 	   let w =22.2;
 	function move6(){
-        var health6=100;
 		if (pos6 <= w){
 		pos6= 97.2+"vw";
         window.open("last.html" , "_self");
@@ -167,7 +198,7 @@ setInterval(shoot,20);
 	let r = 97.2;
 	function shoot(){
 		if (posi1 >= r){
-            posi1= 26 ;
+            posi1= 26;
             ball1.style.visibility="visible"; 
 		}
         else if(pos4-posi1<=0&&check2==1){
@@ -209,6 +240,7 @@ setInterval(shoot,20);
 }
 function see2(){
     if(point>=100){
+        arr[1]=1;
     document.getElementById('plant2').style.visibility="visible";
     if( document.getElementById('plant2').style.visibility="visible"){
     point-=100;
@@ -218,7 +250,7 @@ function see2(){
         let r = 97.2;
         function shoot(){
             if (posi2 >= r){
-            posi2= 34 ;
+            posi2= 34;
             }  
             else if(pos4-posi2<=0&&check2==1){
                 posi2=34;
@@ -259,7 +291,9 @@ function see2(){
 }
 function see3(){
     if(point>=100){
+        arr[2]=1;
     document.getElementById('plant3').style.visibility="visible";
+  
     if( document.getElementById('plant3').style.visibility="visible"){
     point-=100;
     ball3.style.visibility="visible";
@@ -360,6 +394,7 @@ function see4(){
 }
 function see5(){
     if(point>=100){
+        arr[4]=1;
     document.getElementById('plant5').style.visibility="visible";
     if( document.getElementById('plant5').style.visibility="visible"){
     point-=100;
@@ -410,6 +445,7 @@ function see5(){
 }
 function see6(){
     if(point>=100){
+        arr[5]=1;
     document.getElementById('plant6').style.visibility="visible";
     if( document.getElementById('plant6').style.visibility="visible"){
     point-=100;
@@ -510,6 +546,7 @@ function see7(){
 }
 function see8(){
     if(point>=100){
+        arr[7]=1;
     document.getElementById('plant8').style.visibility="visible";
     if( document.getElementById('plant8').style.visibility="visible"){
     point-=100;
@@ -560,6 +597,7 @@ function see8(){
 }
 function see9(){
     if(point>=100){
+        arr[8]=1;
     document.getElementById('plant9').style.visibility="visible";
     if( document.getElementById('plant9').style.visibility="visible"){
     point-=100;
@@ -656,4 +694,4 @@ setInterval(function check(){
         console.log('bye');
     window.location.assign('win.html');
     }
-},1000);
+},1000)
